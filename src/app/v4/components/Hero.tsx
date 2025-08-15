@@ -40,8 +40,9 @@ export default function Hero(): JSX.Element {
     const children = Array.from(container.children) as HTMLElement[];
     if (children.length === 0) return;
 
-    // Measure precise row height after fonts load
-    const ready = (document as any).fonts?.ready as Promise<void> | undefined;
+    // Measure precise row height after fonts load (typed without `any`)
+    const docWithFonts = document as Document & { fonts?: { ready: Promise<void> } };
+    const ready: Promise<void> | undefined = docWithFonts.fonts?.ready;
     const measure = () => {
       const base = children[0].getBoundingClientRect().height; // row height
       const h = base;

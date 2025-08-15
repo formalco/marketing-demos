@@ -1,4 +1,5 @@
 import type { JSX } from "react";
+import Image from "next/image";
 
 export default function Testimonial(): JSX.Element {
   return (
@@ -9,9 +10,11 @@ export default function Testimonial(): JSX.Element {
         </h2>
         <div className="mt-10 rounded-xl bg-white text-neutral-900 p-6 sm:p-8 shadow-xl ring-1 ring-black/5">
           <div className="grid gap-6 sm:grid-cols-[1fr_2fr] items-start">
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1559028012-aa99c5f111a8?q=80&w=1200&auto=format&fit=crop"
               alt="Team collaborating"
+              width={1200}
+              height={400}
               className="w-full h-56 object-cover rounded-lg"
             />
             <blockquote className="text-neutral-700">

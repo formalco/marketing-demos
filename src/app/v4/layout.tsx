@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import "./theme.css";
 import V4ThemeProvider from "./theme-provider";
 import Nav from "./components/Nav";

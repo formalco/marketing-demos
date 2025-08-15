@@ -1,4 +1,5 @@
 import type { JSX } from "react";
+import Image from "next/image";
 
 export default function Solutions(): JSX.Element {
   const items: Array<{ title: string; body: string; img: string }> = [
@@ -36,7 +37,7 @@ export default function Solutions(): JSX.Element {
               className="group rounded-xl p-6 ring-1 ring-black/5 dark:ring-white/10 hover:shadow-lg hover:-translate-y-1 transition-all bg-white/60 dark:bg-white/5 backdrop-blur"
             >
               <div className="h-28 w-full rounded-lg bg-gradient-to-br from-neutral-100 to-neutral-200 dark:from-white/10 dark:to-white/5 grid place-items-center overflow-hidden">
-                <img src={item.img} alt="" className="h-12 w-12 opacity-60 group-hover:scale-110 transition-transform" />
+                <Image src={item.img} alt="" width={48} height={48} className="opacity-60 group-hover:scale-110 transition-transform" />
               </div>
               <h3 className="mt-6 text-lg font-semibold text-neutral-900 dark:text-neutral-100">
                 {item.title}

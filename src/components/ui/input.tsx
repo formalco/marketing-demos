@@ -16,4 +16,4 @@ export const Input = React.forwardRef<HTMLInputElement, BaseInputProps>(
     );
   }
 );
-export { Input };
+ 

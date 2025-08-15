@@ -10,7 +10,6 @@ export default function V4ThemeProvider({ children }: { children: React.ReactNod
       defaultTheme="system"
       enableSystem
       disableTransitionOnChange
-      suppressHydrationWarning
     >
       {children}
     </ThemeProvider>

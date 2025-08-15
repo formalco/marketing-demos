@@ -1,4 +1,5 @@
 import type { JSX } from "react";
+import Link from "next/link";
 
 export default function HomeV3(): JSX.Element {
   return (
@@ -19,8 +20,8 @@ export default function HomeV3(): JSX.Element {
           ))}
         </section>
         <div className="mt-10 flex gap-3">
-          <a href="/" className="rounded-md bg-white/10 px-4 py-2">Back</a>
-          <a href="/v1" className="rounded-md bg-purple-600 text-white px-4 py-2">View v1</a>
+          <Link href="/" className="rounded-md bg-white/10 px-4 py-2">Back</Link>
+          <Link href="/v1" className="rounded-md bg-purple-600 text-white px-4 py-2">View v1</Link>
         </div>
       </div>
     </main>

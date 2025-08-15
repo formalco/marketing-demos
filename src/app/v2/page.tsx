@@ -1,4 +1,5 @@
 import type { JSX } from "react";
+import Link from "next/link";
 
 export default function HomeV2(): JSX.Element {
   return (
@@ -8,8 +9,8 @@ export default function HomeV2(): JSX.Element {
           <h1 className="text-5xl font-extrabold tracking-tight">Your data, handled.</h1>
           <p className="mt-4 text-lg max-w-xl">A bold, high‑contrast variant using a yellow/black palette. Components and styles are fully co‑located in this route.</p>
           <div className="mt-6 flex gap-3">
-            <a href="/" className="rounded-md bg-black text-white px-4 py-2">Back</a>
-            <a href="/v1" className="rounded-md bg-white text-black px-4 py-2">View v1</a>
+            <Link href="/" className="rounded-md bg-black text-white px-4 py-2">Back</Link>
+            <Link href="/v1" className="rounded-md bg-white text-black px-4 py-2">View v1</Link>
           </div>
         </div>
 
