@@ -1,0 +1,22 @@
+---
+globs: src/app/**/*.tsx
+description: Enforce per-route UI imports
+---
+# Import Policy for Route Pages/Components
+
+- Prefer imports from the route‑local `ui` library: `src/app/<route>/ui/*`.
+- Do not import from `@/components/ui/*` inside route files unless you are creating a new local wrapper in `ui/`.
+- If a local wrapper is missing, add it in `src/app/<route>/ui/` by composing the base primitive and apply route theme classes.
+
+Correct (within `src/app/v3/...`):
+
+```tsx
+import { Button } from "../ui/button";
+```
+
+Incorrect:
+
+```tsx
+import { Button } from "@/components/ui/button"; // violates route isolation
+```
+

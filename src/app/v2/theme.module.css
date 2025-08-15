@@ -1,0 +1,14 @@
+.themeV2 {
+  --background: #111111;
+  --foreground: #f6f6f6;
+  --brand: #ffe800; /* Formal yellow */
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* local reset for a chunky look */
+.themeV2 :where(.chunky) {
+  border-radius: 28px;
+}
+
+

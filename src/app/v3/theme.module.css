@@ -1,0 +1,10 @@
+.themeV3 {
+  --background: #0b0f14; /* slate */
+  --foreground: #e7e9ee;
+  --accent: #6d28d9; /* purple-700 */
+  background: linear-gradient(180deg, #0b0f14 0%, #0e1319 100%);
+  color: var(--foreground);
+  min-height: 100vh;
+}
+
+

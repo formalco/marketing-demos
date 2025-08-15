@@ -1,0 +1,24 @@
+---
+alwaysApply: false
+description: How to add a new landing page variant with a local component library
+---
+# Creating a New Variant
+
+1. Add a route folder under `src/app/<route>/` with `layout.tsx`, `page.tsx`, and `theme.module.css`.
+2. Create `src/app/<route>/ui/` and add wrappers for needed primitives by importing from `[src/components/ui](mdc:src/components/ui)`.
+3. Route components must import from `../ui/*`.
+4. Keep styles and tokens in `theme.module.css` and reference them from local `ui` components.
+5. Update `src/app/page.tsx` index if you want it listed.
+
+Minimal wrapper template:
+
+```tsx
+// src/app/<route>/ui/input.tsx
+import * as React from "react";
+import { Input as Base } from "@/components/ui/input";
+
+export const Input = React.forwardRef<HTMLInputElement, React.ComponentProps<typeof Base>>(function Input(props, ref) {
+  return <Base ref={ref} className="rounded-md border-white/10 bg-white/5" {...props} />;
+});
+```
+
